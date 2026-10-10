@@ -1,0 +1,20 @@
+:root {
+  --bg: #080a18;
+  --panel: #11152a;
+  --panel-alt: #171c35;
+  --purple: #7b4dff;
+  --purple-deep: #5b32e6;
+  --gold: #ffd37a;
+  --green: #8aff6a;
+  --orange: #ff9a49;
+  --muted: #a8afc9;
+  --white: #f7f5ff;
+  --line: rgba(168, 175, 201, 0.18);
+  --header-h: 76px;
+  --max: 1280px;
+  --radius: 22px;
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+  --font-display: Bahnschrift, "Avenir Next", "Segoe UI", "Trebuchet MS", sans-serif;
+  --font-body: "Segoe UI", "Avenir Next", "Helvetica Neue", sans-serif;
+  color-scheme: dark;
+}

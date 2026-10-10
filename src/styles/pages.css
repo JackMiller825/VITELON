@@ -1,0 +1,30 @@
+.page-intro {
+  padding-top: 36px;
+}
+
+.chapter-kicker,
+.cast-role {
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.cast-card,
+.chapter-card,
+.channel-card {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+
+.channel-card.is-link {
+  text-decoration: none;
+}
+
+.not-found {
+  min-height: 52vh;
+  display: grid;
+  align-content: center;
+  gap: 16px;
+}
