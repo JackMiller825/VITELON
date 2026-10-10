@@ -5,7 +5,7 @@ type MascotFrameProps = {
   priority?: boolean;
 };
 
-const MISSING_FILE = "vitelon-mascot-wrestling-v2.png";
+const MISSING_FILE = "vitelon-mascot-wrestling-v2.jpg";
 
 export function MascotFrame({ alt, priority = false }: MascotFrameProps) {
   const src = siteConfig.assets.mascot;
@@ -25,8 +25,8 @@ export function MascotFrame({ alt, priority = false }: MascotFrameProps) {
       <img
         src={src}
         alt={alt}
-        width={1254}
-        height={1254}
+        width={1024}
+        height={1024}
         loading={priority ? "eager" : "lazy"}
         fetchPriority={priority ? "high" : "low"}
         decoding="async"

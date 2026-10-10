@@ -63,6 +63,6 @@ describe("shipped configuration", () => {
     assert.equal(canonicalUrl("/"), "https://vitelon.site/");
     assert.equal(canonicalUrl("/story"), "https://vitelon.site/story");
     assert.equal(siteConfig.assets.logo, "/assets/vitelon-logo-transparent.png");
-    assert.equal(siteConfig.assets.mascot, null);
+    assert.equal(siteConfig.assets.mascot, "/assets/vitelon-mascot-wrestling-v2.jpg");
   });
 });

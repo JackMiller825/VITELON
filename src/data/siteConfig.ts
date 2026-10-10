@@ -33,11 +33,7 @@ export const siteConfig = {
   telegramUrl: "",
   assets: {
     logo: publicAsset("assets/vitelon-logo-transparent.png"),
-    /**
-     * The approved wrestling scene (vitelon-mascot-wrestling-v2.png) was not in the
-     * supplied brand folder. Keep this null until that file is copied to public/assets.
-     */
-    mascot: null as string | null,
+    mascot: publicAsset("assets/vitelon-mascot-wrestling-v2.jpg"),
     banner3to1: publicAsset("assets/vitelon-banner-3to1.png"),
     banner1100: publicAsset("assets/vitelon-banner-1100x520.png"),
   },

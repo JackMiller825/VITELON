@@ -68,9 +68,6 @@ Copied into `public/assets/` from the supplied brand folder:
 
 Favicon files in `public/` were resized from the transparent logo.
 
-Not in the brand folder, so they are not referenced as images:
+The wrestling scene is `public/assets/vitelon-mascot-wrestling-v2.jpg` (1024×1024). It is the hero, origin, community, story, cast, and token artwork.
 
-- `asset-manifest.json`
-- `vitelon-mascot-wrestling-v2.png` (expected PNG, 1254×1254)
-
-Scene frames say the wrestling artwork is missing. When that file is available, copy it to `public/assets/vitelon-mascot-wrestling-v2.png` and set `siteConfig.assets.mascot` to that path. Do not substitute the banner or the emotion stickers.
+`asset-manifest.json` was not in the original brand folder.
