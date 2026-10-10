@@ -2,11 +2,11 @@
 
 Single-page site for the VITELON / $VITELON community story. Routes are `/`, `/story`, and `/token`.
 
-Published site: https://jackmiller825.github.io/VITELON/
+Published site: https://vitelon.site/
 
 ## Scripts
 
-- `npm run dev` — local dev server at http://localhost:5173/VITELON/
+- `npm run dev` — local dev server at http://localhost:5173/
 - `npm run build` — typecheck and production build (`dist`)
 - `npm run typecheck` — `tsc -b`
 - `npm run lint` — oxlint
@@ -17,11 +17,11 @@ Published site: https://jackmiller825.github.io/VITELON/
 
 Pushes to `main` on https://github.com/JackMiller825/VITELON run `.github/workflows/deploy-pages.yml`. That workflow builds `dist` and deploys it with GitHub Pages actions.
 
-The Vite `base` is `/VITELON/`. The build also copies `index.html` to `404.html` so `/story` and `/token` load the app when the host has no rewrite rule. A `.nojekyll` file keeps GitHub Pages from dropping files.
+The repository’s Pages site uses the custom domain `vitelon.site`, so the app is served from the domain root. `public/CNAME` keeps that domain on each deploy. The build copies `index.html` to `404.html` so `/story` and `/token` load the app. A `.nojekyll` file keeps GitHub Pages from dropping files.
 
 ## Amplify SPA rewrite
 
-If this app is later hosted on Amplify at the domain root, change the Vite `base` back to `/` and add the rule in `amplify-rewrites.json`:
+If this app is later hosted on Amplify, add the rule in `amplify-rewrites.json`:
 
 ```json
 {

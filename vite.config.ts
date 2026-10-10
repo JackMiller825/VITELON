@@ -18,6 +18,6 @@ function githubPagesSpaFallback() {
 }
 
 export default defineConfig({
-  base: "/VITELON/",
+  base: "/",
   plugins: [react(), githubPagesSpaFallback()],
 });

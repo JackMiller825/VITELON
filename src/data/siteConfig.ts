@@ -1,8 +1,8 @@
 import { isHttpsUrl, officialAddress, officialHref } from "./validators.ts";
 
-/** Project site published from JackMiller825/VITELON. */
-export const pagesOrigin = "https://jackmiller825.github.io";
-export const pagesBase = "/VITELON/";
+/** Custom domain already attached to the GitHub Pages site. */
+export const pagesOrigin = "https://vitelon.site";
+export const pagesBase = "/";
 
 function publicBase(): string {
   const fromVite = (import.meta as { env?: { BASE_URL?: string } }).env?.BASE_URL;

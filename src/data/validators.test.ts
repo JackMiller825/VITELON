@@ -46,7 +46,7 @@ describe("shipped configuration", () => {
     assert.equal(siteConfig.name, "VITELON");
     assert.equal(siteConfig.ticker, "$VITELON");
     assert.equal(siteConfig.network, "Ethereum");
-    assert.equal(siteConfig.siteUrl, "https://jackmiller825.github.io/VITELON");
+    assert.equal(siteConfig.siteUrl, "https://vitelon.site");
     assert.equal(siteConfig.contractAddress, "");
     assert.equal(siteConfig.totalSupply, "");
     assert.equal(siteConfig.taxLp, "");
@@ -59,13 +59,10 @@ describe("shipped configuration", () => {
   });
 
   it("uses the GitHub Pages URL for canonical and social metadata", () => {
-    assert.equal(
-      socialImageUrl(),
-      "https://jackmiller825.github.io/VITELON/assets/vitelon-banner-3to1.png",
-    );
-    assert.equal(canonicalUrl("/"), "https://jackmiller825.github.io/VITELON/");
-    assert.equal(canonicalUrl("/story"), "https://jackmiller825.github.io/VITELON/story");
-    assert.equal(siteConfig.assets.logo, "/VITELON/assets/vitelon-logo-transparent.png");
+    assert.equal(socialImageUrl(), "https://vitelon.site/assets/vitelon-banner-3to1.png");
+    assert.equal(canonicalUrl("/"), "https://vitelon.site/");
+    assert.equal(canonicalUrl("/story"), "https://vitelon.site/story");
+    assert.equal(siteConfig.assets.logo, "/assets/vitelon-logo-transparent.png");
     assert.equal(siteConfig.assets.mascot, null);
   });
 });
