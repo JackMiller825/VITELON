@@ -316,6 +316,30 @@
   align-content: start;
 }
 
+.ca-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+  padding: 18px 22px;
+}
+
+.ca-row .stat-label,
+.ca-row .stat-value {
+  margin: 0;
+}
+
+.ca-row .stat-value {
+  margin-right: auto;
+}
+
+.ca-value {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+}
+
 .stat-label,
 .token-table dt,
 .channel-kicker {
@@ -598,7 +622,7 @@
   }
 
   .footer-grid {
-    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-columns: 1.4fr 1fr;
   }
 
   .hero-candles {

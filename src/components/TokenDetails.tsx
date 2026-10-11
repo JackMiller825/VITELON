@@ -1,44 +1,27 @@
 import { ContractCopy } from "./ContractCopy.tsx";
-import {
-  pendingLabels,
-  siteConfig,
-  verifiedContract,
-  verifiedSupply,
-  verifiedTaxLp,
-} from "../data/siteConfig.ts";
+import { currentContractText, siteConfig } from "../data/siteConfig.ts";
 
 export function TokenDetails() {
-  const address = verifiedContract();
-  const supply = verifiedSupply();
-  const taxLp = verifiedTaxLp();
-
+  const contractText = currentContractText();
   const rows = [
-    { label: "NAME", value: siteConfig.name, pending: false },
-    { label: "TICKER", value: siteConfig.ticker, pending: false },
-    { label: "NETWORK", value: siteConfig.network, pending: false },
-    { label: "CONTRACT", value: address ?? pendingLabels.contractToken, pending: !address },
-    { label: "TOTAL SUPPLY", value: supply ?? pendingLabels.supply, pending: !supply },
-    { label: "TAX / LP", value: taxLp ?? pendingLabels.taxLp, pending: !taxLp },
+    { label: "CA", value: contractText, copy: true },
+    { label: "TOTAL SUPPLY", value: siteConfig.totalSupply, copy: false },
+    { label: "BUY / SELL TAX", value: siteConfig.buySellTax, copy: false },
+    { label: "LP STATUS", value: siteConfig.lpStatus, copy: false },
+    { label: "OWNERSHIP", value: siteConfig.ownership, copy: false },
   ];
 
   return (
-    <div className="stack">
-      <dl className="token-table">
-        {rows.map((row) => (
-          <div key={row.label}>
-            <dt>{row.label}</dt>
-            <dd className={row.pending ? "is-pending" : undefined}>
-              {row.value}
-              {row.label === "CONTRACT" ? (
-                <div className="copy-row">
-                  <ContractCopy address={address} />
-                </div>
-              ) : null}
-            </dd>
-          </div>
-        ))}
-      </dl>
-      <p className="note">{pendingLabels.detailsLine}</p>
-    </div>
+    <dl className="token-table">
+      {rows.map((row) => (
+        <div key={row.label}>
+          <dt>{row.label}</dt>
+          <dd className={row.copy ? "ca-value" : undefined}>
+            <span>{row.value}</span>
+            {row.copy ? <ContractCopy value={contractText} /> : null}
+          </dd>
+        </div>
+      ))}
+    </dl>
   );
 }

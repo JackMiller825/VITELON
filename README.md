@@ -42,13 +42,19 @@ Edit only `src/data/siteConfig.ts`.
 - Ticker: $VITELON
 - Network: Ethereum
 
+## Tokenomics
+
+- Total supply: 1,000,000,000
+- Buy / Sell tax: 0%
+- LP status: Burn
+- Ownership: Renounce
+- Contract: `Coming Soon..` until `contractAddress` is a valid `0x` address. The copy button copies that exact text.
+
 ## Still pending
 
 Leave these blank until they are verified. The site will not turn them into links.
 
 - `contractAddress`
-- `totalSupply`
-- `taxLp`
 - `tradingUrl`
 - `chartUrl`
 - `xUrl`

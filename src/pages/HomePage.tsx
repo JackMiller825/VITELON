@@ -1,16 +1,13 @@
 import { BuySteps } from "../components/BuySteps.tsx";
 import { Button } from "../components/Button.tsx";
 import { ContractCopy } from "../components/ContractCopy.tsx";
-import { FAQAccordion } from "../components/FAQAccordion.tsx";
 import { MascotFrame } from "../components/MascotFrame.tsx";
 import { Seo } from "../components/Seo.tsx";
 import { StatusPill } from "../components/StatusPill.tsx";
 import {
+  currentContractText,
   pendingLabels,
   siteConfig,
-  verifiedContract,
-  verifiedSupply,
-  verifiedTaxLp,
   verifiedTelegramUrl,
   verifiedTradingUrl,
   verifiedXUrl,
@@ -20,13 +17,10 @@ const sceneAlt =
   "VITELON, a trader in a purple-and-gold wrestling outfit, stands between a charging bull and a bear shielding a purple crystal.";
 
 export function HomePage() {
-  const address = verifiedContract();
+  const contractText = currentContractText();
   const trading = verifiedTradingUrl();
   const telegram = verifiedTelegramUrl();
   const xUrl = verifiedXUrl();
-  const supply = verifiedSupply();
-  const taxLp = verifiedTaxLp();
-  const supplyKnown = Boolean(supply && taxLp);
 
   return (
     <>
@@ -112,38 +106,32 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="band" id="token-info" aria-labelledby="snapshot-heading">
+      <section className="band" id="token-info" aria-labelledby="tokenomics-heading">
         <div className="wrap stack">
-          <div>
-            <p className="eyebrow">TOKEN SNAPSHOT</p>
-            <h2 id="snapshot-heading">Meet the token.</h2>
+          <h2 id="tokenomics-heading">Tokenomics</h2>
+          <div className="ca-row lift">
+            <p className="stat-label">CA</p>
+            <p className="stat-value">{contractText}</p>
+            <ContractCopy value={contractText} />
           </div>
           <div className="grid-4">
             <article className="stat-card lift">
-              <p className="stat-label">NAME</p>
-              <p className="stat-value">{siteConfig.name}</p>
+              <p className="stat-label">TOTAL SUPPLY</p>
+              <p className="stat-value">{siteConfig.totalSupply}</p>
             </article>
             <article className="stat-card lift">
-              <p className="stat-label">TICKER</p>
-              <p className="stat-value">{siteConfig.ticker}</p>
+              <p className="stat-label">BUY / SELL TAX</p>
+              <p className="stat-value">{siteConfig.buySellTax}</p>
             </article>
             <article className="stat-card lift">
-              <p className="stat-label">NETWORK</p>
-              <p className="stat-value">{siteConfig.network}</p>
+              <p className="stat-label">LP STATUS</p>
+              <p className="stat-value">{siteConfig.lpStatus}</p>
             </article>
             <article className="stat-card lift">
-              <p className="stat-label">CONTRACT</p>
-              <p className={address ? "stat-value" : "stat-value is-pending"}>
-                {address ?? pendingLabels.contractHome}
-              </p>
-              <ContractCopy address={address} />
+              <p className="stat-label">OWNERSHIP</p>
+              <p className="stat-value">{siteConfig.ownership}</p>
             </article>
           </div>
-          <p className="note">
-            {supplyKnown
-              ? `Supply: ${supply}. Tax / LP: ${taxLp}.`
-              : pendingLabels.supplyLine}
-          </p>
         </div>
       </section>
 
@@ -192,32 +180,6 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="band" id="faq" aria-labelledby="faq-heading">
-        <div className="wrap stack">
-          <div>
-            <p className="eyebrow">QUICK ANSWERS</p>
-            <h2 id="faq-heading">Before the bell rings.</h2>
-          </div>
-          <FAQAccordion
-            items={[
-              {
-                question: "What is VITELON?",
-                answer: "An Ethereum meme token with a cosmic bull-versus-bear story.",
-              },
-              {
-                question: "Where is the contract?",
-                answer: address
-                  ? `Official contract address: ${address}`
-                  : "Official contract address: pending verification.",
-              },
-              {
-                question: "Is this an investment promise?",
-                answer: "No. It is a meme token; crypto is risky. Do your own research.",
-              },
-            ]}
-          />
-        </div>
-      </section>
     </>
   );
 }

@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import {
   canonicalUrl,
+  currentContractText,
   pendingLabels,
   siteConfig,
   socialImageUrl,
@@ -48,8 +49,11 @@ describe("shipped configuration", () => {
     assert.equal(siteConfig.network, "Ethereum");
     assert.equal(siteConfig.siteUrl, "https://vitelon.site");
     assert.equal(siteConfig.contractAddress, "");
-    assert.equal(siteConfig.totalSupply, "");
-    assert.equal(siteConfig.taxLp, "");
+    assert.equal(siteConfig.totalSupply, "1,000,000,000");
+    assert.equal(siteConfig.buySellTax, "0%");
+    assert.equal(siteConfig.lpStatus, "Burn");
+    assert.equal(siteConfig.ownership, "Renounce");
+    assert.equal(currentContractText(), "Coming Soon..");
     assert.equal(verifiedContract(), null);
     assert.equal(verifiedTradingUrl(), null);
     assert.equal(verifiedChartUrl(), null);

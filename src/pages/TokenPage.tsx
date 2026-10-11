@@ -49,7 +49,7 @@ export function TokenPage() {
       <section className="band page-intro" aria-labelledby="token-heading">
         <div className="wrap split">
           <div className="stack">
-            <p className="eyebrow">TOKEN</p>
+            <p className="eyebrow">TOKENOMICS</p>
             <h1 id="token-heading">
               VITELON / <span className="gold">$VITELON</span>
             </h1>
@@ -63,7 +63,7 @@ export function TokenPage() {
 
       <section className="band" id="token-details" aria-labelledby="details-heading">
         <div className="wrap stack">
-          <h2 id="details-heading">TOKEN DETAILS</h2>
+          <h2 id="details-heading">Tokenomics</h2>
           <TokenDetails />
         </div>
       </section>

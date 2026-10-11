@@ -5,7 +5,7 @@ import { siteConfig } from "../data/siteConfig.ts";
 const links = [
   { to: "/", label: "Home", end: true },
   { to: "/story", label: "Story", end: false },
-  { to: "/token", label: "Token", end: false },
+  { to: "/token", label: "Tokenomics", end: false },
 ];
 
 export function Header() {

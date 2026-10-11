@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { pendingLabels, verifiedTelegramUrl, verifiedXUrl } from "../data/siteConfig.ts";
 
 export function Footer() {
@@ -13,14 +12,6 @@ export function Footer() {
             <p className="footer-brand">VITELON</p>
             <p className="prose">A cosmic bull-versus-bear story. Built for fun, community, and the next chapter.</p>
           </div>
-          <nav aria-label="Explore">
-            <p className="footer-label">Explore</p>
-            <div className="footer-links">
-              <Link to="/">Home</Link>
-              <Link to="/story">Story</Link>
-              <Link to="/token">Token</Link>
-            </div>
-          </nav>
           <div>
             <p className="footer-label">Community</p>
             <div className="footer-links">

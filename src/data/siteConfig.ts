@@ -25,8 +25,10 @@ export const siteConfig = {
   /** GitHub Pages project URL. Canonical and social image URLs use this. */
   siteUrl: `${pagesOrigin}${pagesBase.replace(/\/$/, "")}`,
   contractAddress: "",
-  totalSupply: "",
-  taxLp: "",
+  totalSupply: "1,000,000,000",
+  buySellTax: "0%",
+  lpStatus: "Burn",
+  ownership: "Renounce",
   tradingUrl: "",
   chartUrl: "",
   xUrl: "",
@@ -48,8 +50,8 @@ export const siteConfig = {
       description: "Explore the VITELON cosmic market saga, its characters, and the next round.",
     },
     token: {
-      title: "Token Details — VITELON",
-      description: "See VITELON token details, verified links, and the transparent three-step buying guide.",
+      title: "Tokenomics — VITELON",
+      description: "See VITELON tokenomics, verified links, and the transparent three-step buying guide.",
     },
     notFound: {
       title: "Page not found — VITELON",
@@ -105,9 +107,9 @@ export function verifiedSupply(): string | null {
   return value ? value : null;
 }
 
-export function verifiedTaxLp(): string | null {
-  const value = siteConfig.taxLp.trim();
-  return value ? value : null;
+/** Shown contract text. Copies use this exact string. */
+export function currentContractText(): string {
+  return verifiedContract() ?? "Coming Soon..";
 }
 
 export function socialImageUrl(): string {
