@@ -57,8 +57,8 @@ describe("shipped configuration", () => {
     assert.equal(verifiedContract(), null);
     assert.equal(verifiedTradingUrl(), null);
     assert.equal(verifiedChartUrl(), null);
-    assert.equal(verifiedXUrl(), null);
-    assert.equal(verifiedTelegramUrl(), null);
+    assert.equal(verifiedXUrl(), "https://x.com/vitelon_eth");
+    assert.equal(verifiedTelegramUrl(), "https://t.me/vitelon_eth");
     assert.equal(canOpenTrading(siteConfig.contractAddress, siteConfig.tradingUrl), false);
   });
 

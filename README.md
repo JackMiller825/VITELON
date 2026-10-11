@@ -50,6 +50,11 @@ Edit only `src/data/siteConfig.ts`.
 - Ownership: Renounce
 - Contract: `Coming Soon..` until `contractAddress` is a valid `0x` address. The copy button copies that exact text.
 
+## Community
+
+- X: https://x.com/vitelon_eth
+- Telegram: https://t.me/vitelon_eth
+
 ## Still pending
 
 Leave these blank until they are verified. The site will not turn them into links.
@@ -57,8 +62,6 @@ Leave these blank until they are verified. The site will not turn them into link
 - `contractAddress`
 - `tradingUrl`
 - `chartUrl`
-- `xUrl`
-- `telegramUrl`
 
 The trade button stays disabled until both `contractAddress` and `tradingUrl` pass validation (a `0x` + 40 hex address, and an `https` URL).
 

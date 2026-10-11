@@ -31,8 +31,8 @@ export const siteConfig = {
   ownership: "Renounce",
   tradingUrl: "",
   chartUrl: "",
-  xUrl: "",
-  telegramUrl: "",
+  xUrl: "https://x.com/vitelon_eth",
+  telegramUrl: "https://t.me/vitelon_eth",
   assets: {
     logo: publicAsset("assets/vitelon-logo-transparent.png"),
     mascot: publicAsset("assets/vitelon-mascot-wrestling-v2.jpg"),
@@ -72,8 +72,6 @@ export const pendingLabels = {
   chartPair: "pending official pair URL",
   footerX: "X: pending",
   footerTelegram: "Telegram: pending",
-  footerXReady: "X: [official link]",
-  footerTelegramReady: "Telegram: [official link]",
 } as const;
 
 export function verifiedContract(): string | null {
