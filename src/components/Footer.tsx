@@ -50,10 +50,6 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="footer-base">
-          <p>Unofficial community meme project. No endorsement implied. Meme token; no promises. Not financial advice.</p>
-          <p>Ethereum ◇</p>
-        </div>
       </div>
     </footer>
   );

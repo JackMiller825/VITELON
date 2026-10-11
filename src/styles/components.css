@@ -549,17 +549,6 @@
   text-decoration: none;
 }
 
-.footer-base {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  margin-top: 28px;
-  padding-top: 18px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
 .pending-text {
   color: var(--muted);
 }
@@ -737,10 +726,6 @@
   .token-table div {
     grid-template-columns: 1fr;
     gap: 4px;
-  }
-
-  .footer-base {
-    flex-direction: column;
   }
 }
 
