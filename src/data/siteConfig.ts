@@ -63,16 +63,10 @@ export const siteConfig = {
 };
 
 export const pendingLabels = {
-  contractHome: "pending configuration",
   contractToken: "pending verification",
-  supply: "pending verification",
-  taxLp: "pending verification",
-  supplyLine: "Supply / taxes / liquidity: pending verification.",
-  detailsLine: "Data placeholders must be replaced with verified project information before launch.",
   tradingLinkHome: "Trading link pending verification.",
   tradingLinkToken: "Trading URL pending verification.",
   verifiedAddressPending: "Verified address pending.",
-  contractControl: "CONTRACT PENDING",
   xProfile: "pending official profile",
   telegramGroup: "pending official group",
   chartPair: "pending official pair URL",
@@ -100,11 +94,6 @@ export function verifiedXUrl(): string | null {
 
 export function verifiedTelegramUrl(): string | null {
   return officialHref(siteConfig.telegramUrl);
-}
-
-export function verifiedSupply(): string | null {
-  const value = siteConfig.totalSupply.trim();
-  return value ? value : null;
 }
 
 /** Shown contract text. Copies use this exact string. */
